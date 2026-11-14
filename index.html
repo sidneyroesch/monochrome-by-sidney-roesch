@@ -1,0 +1,50 @@
+<!-- Startsidan (branding + hero sektionen) -->
+<!-- Webbplatsen är på engelska då målgruppen är internationell, men reflektioner och kommentarer är på svenska enligt kursens krav -->
+<!-- Reflektion: På startsidan ville jag skapa ett första intryck som speglar min stil som fotograf. Jag valde en minimalistisk design med en stor bild för att direkt visa känslan i mitt arbete. Jag har testat olika placeringar av text och bild innan jag bestämde mig för just den här layout eftersom det kändes mer estetiskt lugnt. Jag har också lagt till en knapp som leder till shop-sidan för att göra det enkelt att navigera vidare och även en knapp för att erbjuda dark mode vid synskada. Under arbetet har jag behövt göra mycket research och testa mig fram för att förstå hur layout och spacing fungerar. När jag har fastnat har jag fått hjälp genom ChatGPT för att kunna lösa problem och förstå koden bättre. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Monochrome by Sidney Roesch is an artist/photographer who creates black and white photographic art and design collections. Explore the gallery, read about the history behind the photographs and contact us for more information."/>
+    <meta name="keywords" content="Monochrome, Sidney Roesch, artist, photographer, black and white photography, design collections, gallery, history, contact"/>
+    <meta name="author" content="Sidney Roesch"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Monochrome by Sidney Roesch</title>
+  </head>
+    <body>
+    <header>
+      <!-- en knapp som möjliggör att man tar bort eller lägger till dark mode -->
+      <button class="theme-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Monochrome by Sidney Roesch</h1>
+          <p>Fine art prints</p>
+          <a href="shop.html" class="btn">Shop Prints</a>
+        </div>
+        <img src="images/D0B9320E-BB00-47E9-879D-8F837CE708FA_1_105_c.jpeg" alt="Abstract black and white photograph of a light background and metal textured door in foreground by Sidney Roesch">
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Monochrome by Sidney Roesch. All rights reserved.</p>
+    </footer>
+    <!-- jag har googlat mig fram till hur man skapar en dark mode toggle och jag har lagt scriptet längst ner i body då jag har förstått att det gör att sidan kommer att laddas upp snabbare om Javascript körs sist -->
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>
+

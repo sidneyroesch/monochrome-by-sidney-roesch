@@ -1,0 +1,124 @@
+<!-- Shop (produkter - prints & merchandise) -->
+<!-- Reflektion: Jag ville jag att shop-sidan skulle kännas lik gallery-sidan men mer strukturerad. Jag använde flexbox igen för att skapa en layout som skulle fungera som ett rutnät och fick justera bildstorlekarna så att alla produkter ser jämna ut. Jag har valt att hålla designen enkel och låta bilderna vara i fokus. Jag har lagt en “View print”-knapp som leder till en större version av bilden eftersom jag inte har byggt en riktig köpfunktion. Jag har behövt testa mycket själv för att förstå hur layout och spacing fungerar och ibland har det blivit fel som jag fått lösa steg för steg. Jag har också sökt hjälp på nätet när jag fastnat för att förstå hur jag ska tänka. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Discover our shop with exclusive black and white photographs by Sidney Roesch. Explore unique prints and design collections inspired by her artistic vision and passion for monochrome images."/>
+    <meta name="keywords" content="Monochrome, Sidney Roesch, artist, photographer, black and white photography, shop, prints, merchandise, design collections"/>
+    <meta name="author" content="Sidney Roesch"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Monochrome by Sidney Roesch</title>
+  </head>
+  <body>
+    <header class="header"> 
+      <button class="theme-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Shop</h1>
+    </header>
+    <main>
+      <section class="shop-section">
+        <div class="shop-items">
+        <article class="shop-item">
+          <a href="images/DF1EC5B0-B7B6-471C-91A6-7568C139A8F3_1_105_c.jpeg" target="_blank">
+          <img src="images/DF1EC5B0-B7B6-471C-91A6-7568C139A8F3_1_105_c.jpeg" alt="Black and white photograph of small boats by a lakeshore framed by tall trees, photographed by Sidney Roesch"></a>
+          <h3>Where the Water Waits</h3>
+          <p class="print-description">A quiet lakeside scene where stillness and structure meet beneath a shifting sky.</p>
+          <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4, A3 and A2.</p>
+          <p class="print-price">From €60</p>
+          <a href="images/DF1EC5B0-B7B6-471C-91A6-7568C139A8F3_1_105_c.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+          <a href="images/8067ADEB-73E0-4FAF-8D22-48FF220E454B_1_105_c.jpeg" target="_blank">
+          <img src="images/8067ADEB-73E0-4FAF-8D22-48FF220E454B_1_105_c.jpeg" alt="Black and white photograph of a small boat tied with rope in tall grass by a lakeshore, photographed by Sidney Roesch"></a>
+          <h3>Bound to Shore</h3>
+          <p class="print-description">A close study of surface and tension, where object and landscape meet.</p>
+          <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4, A3 and A2.</p>
+          <p class="print-price">From €40</p>
+          <a href="images/8067ADEB-73E0-4FAF-8D22-48FF220E454B_1_105_c.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+          <a href="images/49AB0B98-A196-42F5-8657-D82037779441_1_105_c.jpeg" target="_blank">
+          <img src="images/49AB0B98-A196-42F5-8657-D82037779441_1_105_c.jpeg" alt="Black and white photograph of a wooden lookout structure standing in an open field by water under a cloudy sky, photographed by Sidney Roesch"></a>
+          <h3>Still Watch</h3>
+          <p class="print-description">A solitary structure set against an open landscape, holding space without purpose or presence.</p>
+          <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4, A3 and A2.</p>
+          <p class="print-price">From €60</p>
+          <a href="images/49AB0B98-A196-42F5-8657-D82037779441_1_105_c.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+          <a href="images/4FFFCC73-A44F-4390-891D-33D9E04E89E5_1_105_c.jpeg" target="_blank">
+          <img src="images/4FFFCC73-A44F-4390-891D-33D9E04E89E5_1_105_c.jpeg" alt="Black and white photograph of snow and frost clinging to thin branches against a soft sky, photographed by Sidney Roesch"></a>
+          <h3>Held by Cold</h3>   
+          <p class="print-description">A study of weight and fragility, where cold gathers and briefly reshapes form.</p>
+          <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4, A3 and A2.</p>
+          <p class="print-price">From €60</p>
+          <a href="images/4FFFCC73-A44F-4390-891D-33D9E04E89E5_1_105_c.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+          <a href="images/02A415DB-26DB-4D99-8564-6DDBC50D3B86_1_105_c.jpeg" target="_blank">
+          <img src="images/02A415DB-26DB-4D99-8564-6DDBC50D3B86_1_105_c.jpeg" alt="Black and white photograph of a road leading into fog with distant car headlights and open landscape, photographed by Sidney Roesch"></a>    
+          <h3>Through the Haze</h3>
+          <p class="print-description">A road dissolving into mist, where direction remains but destination disappears.</p>
+          <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4 and A3.</p>
+          <p class="print-price">From €40</p>
+          <a href="images/02A415DB-26DB-4D99-8564-6DDBC50D3B86_1_105_c.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+            <article class="shop-item">
+            <a href="images/805B1229-19E7-4FE8-A6C8-6909F39B1752_1_201_a.jpeg" target="_blank">
+            <img src="images/805B1229-19E7-4FE8-A6C8-6909F39B1752_1_201_a.jpeg" alt="Black and white photograph of light streaming through tall windows inside a stone building, photographed by Sidney Roesch"></a>
+            <h3>Falling Quietly</h3>
+            <p class="print-description">Light breaks through stone, shaping space into something momentary and still.</p>
+            <p class="print-info">Archival fine art print on matte paper.<br>Available in A4, A3 and A2.</p>
+            <p class="print-price">From €60</p>
+            <a href="images/805B1229-19E7-4FE8-A6C8-6909F39B1752_1_201_a.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+            <a href="images/CC098AA3-68A9-4C1B-9BFD-B07FA30AA7D6_1_201_a.jpeg" target="_blank">
+            <img src="images/CC098AA3-68A9-4C1B-9BFD-B07FA30AA7D6_1_201_a.jpeg" alt="Black and white photograph of people walking along a city street with strong sunlight and shadows between buildings, photographed by Sidney Roesch"></a>
+            <h3>Figures in Transit</h3>
+            <p class="print-description">Figures move through a narrow street as light dissolves detail into shadow and motion.</p>
+            <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4 and A3.</p>
+            <p class="print-price">From €40</p>
+            <a href="images/CC098AA3-68A9-4C1B-9BFD-B07FA30AA7D6_1_201_a.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+            <a href="images/0FB5653E-7A39-4B26-9639-0EA1DBF194C8_1_201_a.jpeg" target="_blank">
+            <img src="images/0FB5653E-7A39-4B26-9639-0EA1DBF194C8_1_201_a.jpeg" alt="Black and white photograph of a gated passage under an arched structure with strong light and shadows, photographed by Sidney Roesch"></a>
+            <h3>Between Passage</h3>
+            <p class="print-description">A passage interrupted by structure and shadow, where light suggests a space just out of reach.</p>
+            <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4 and A3.</p>
+            <p class="print-price">From €40</p>
+            <a href="images/0FB5653E-7A39-4B26-9639-0EA1DBF194C8_1_201_a.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        <article class="shop-item">
+            <a href="images/95690CFB-1D71-4BA3-BC43-543D2E6A7AEC_1_201_a.jpeg" target="_blank">
+            <img src="images/95690CFB-1D71-4BA3-BC43-543D2E6A7AEC_1_201_a.jpeg" alt="Black and white photograph of a row of buildings with repeating chimneys and architectural details, photographed by Sidney Roesch"></a>
+            <h3>Repeating Forms</h3>
+            <p class="print-description">A study in repetition and structure, where variation emerges within a fixed rhythm.</p>
+            <p class="print-info">Archival pigment print on matte fine art paper.<br>Available in A4 and A3.</p>
+            <p class="print-price">From €40</p>
+            <a href="images/95690CFB-1D71-4BA3-BC43-543D2E6A7AEC_1_201_a.jpeg" target="_blank" class="btn">View print</a>
+        </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2026 Monochrome by Sidney Roesch. All rights reserved.</p>
+    </footer>
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>

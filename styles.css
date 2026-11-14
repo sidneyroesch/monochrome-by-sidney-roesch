@@ -1,0 +1,442 @@
+/* Reflektion: Jag har försökt att skapa en stilren och minimalistisk design som passar mitt varumärke. Jag har använt mig av en monokrom färgpalett med svart, vitt och grått för att ge en känsla av elegans och minimalism. Jag har använt flexbox för layout på flera sidor, till exempel gallery och shop, och har fått testa mig fram mycket för att förstå hur det fungerar. Jag har också arbetat med hover-effekter och transitions för att göra sidan mer levande. Jag har även arbetat med fokus (focus) för att det ska vara tydligt när man navigerar med tangentbordet. Jag lärde mig att detta är viktigt för tillgänglighet. Jag har fått testa mig fram för att förstå hur det fungerar och även fått hjälp när jag fastnade. Jag har också lagt till en mörk lägesfunktion för att ge användarna möjlighet att välja den visningsstil som passar dem bäst. Dark mode krävde extra research och att jag fick testa olika lösningar. Det var ibland svårt att få alla färger att fungera korrekt i mörkt läge. Jag har fokuserat på att göra navigationen enkel, med tydliga länkar och en ren layout. Min målsättning var att skapa en webbplats som inte bara ser elegant ut, utan också är lätt att använda och navigera. När det gäller utveckling då har har försökt att använda mig av mer shorthand för att förebygga att det blir mycket kod och rörigt, men det har varit en utmaning. Generellt har jag lärt mig mycket genom trial and error och genom att söka information. När jag har fastnat har jag sökt hjälp för att förstå problemen för att kunna fortsätta utvecklas. */ 
+
+/* === Navigation & Links === */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+nav li {
+  padding: 10px 20px 0;
+}
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-size: 0.8em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* === Tillgänglighet === */
+/* visar tydligt när en länk är i fokus, vilket är viktigt för tillgänglighet om man navigerar med tangentbordet */
+a:focus {
+  outline: none;
+  border-bottom: 2px solid black;
+}
+input:focus, 
+textarea:focus {
+  outline: none;
+  border: 1px solid #888;
+}
+form button:focus {
+  outline: none;
+  border: 1px solid #888;
+  background-color: #333;
+}
+.theme-toggle:focus {
+  outline: none;
+  border: 2px solid black;
+}
+.btn:focus {
+  outline: none;
+  border: 1px solid #888;
+  background-color: #333;
+}
+/* För mörkt läge, ändra färgen på fokuslinjen så att den syns tydligt */
+body.dark a:focus {
+  border-bottom: 2px solid white;
+} 
+body.dark .btn:focus {
+  border: 1px solid #fff;
+  background-color: #888;
+}
+body.dark form button:focus {
+  border: 1px solid #fff;
+}
+body.dark {
+  background-color: #111;
+  color: #fff;
+}
+body.dark header, 
+body.dark footer {
+  background-color: #000;
+}
+body.dark form label {
+  color: #ccc;
+}
+body.dark .contact-details p {
+  color: #ccc;
+}
+body.dark .contact-details a {
+  color: #fff;
+}
+body.dark nav a {
+  color: #fff;
+}
+body.dark nav a:hover {
+  text-decoration: underline;
+}
+body.dark .btn {
+  background-color: #fff;
+  color: #000;
+}
+body.dark .btn:hover {
+  background-color: #ccc;
+} 
+body.dark .theme-toggle {
+  color: #fff;
+  border: 1px solid #fff; 
+}
+.theme-toggle {
+  color: #000;
+  border: 1px solid #000; 
+}
+
+/* === Header === */
+header {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+header h1 {
+  font-size: 3.5em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+/* === Main Content & Startpage === */
+body, header, main, footer { 
+  max-width: 1000px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.hero {
+  text-align: center;
+  padding: 0px 20px;
+  margin-bottom: 60px;
+}
+.hero-text {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+.hero-text h1 {
+  font-size: 3.5em;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.hero-text p {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+/* === About Section === */
+.about-section {
+  padding: 40px 20px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.about-header h2 {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 500;
+  margin-top: 40px;
+}
+.about-text {
+  color: #666;
+  max-width: 700px;
+  margin: 30px auto 60px auto;
+  padding: 0 20px;
+  text-align: center;
+  line-height: 1.6;
+} 
+
+/* === Footer === */
+footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+/* === Buttons === */
+button {
+  background: transparent;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  margin-bottom: 30px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+.btn:hover {
+  background-color: #333;
+}
+
+/* === Images === */
+.hero img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+}
+.about-image img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 20px;
+}
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+} 
+.gallery-item img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.shop-item img {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-bottom: 20px;
+}
+.shop-item img:hover {
+  opacity: 0.9;
+  cursor: pointer;
+  transform: scale(1.03);
+}
+.contact-image img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* === Gallery  === */
+.gallery-section {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+.gallery-section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: 500;
+  margin-bottom: 20px;
+} 
+.gallery-section p {
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  line-height: 1.6;
+}
+.gallery-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.gallery-item {
+  flex: 1 1 250px;
+  max-width: 400px;
+}
+.gallery-item p {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #777;
+}
+.gallery-item a {
+  text-decoration: none;
+  color: #000;
+}
+.gallery-item a:hover {
+  text-decoration: underline;
+}
+
+/* === Shop === */
+.shop-section {
+  padding: 40px 20px;
+  margin-bottom: 60px;
+}
+.shop-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+.shop-item {
+  flex: 1 1 250px;
+  max-width: 320px;
+  overflow: hidden;
+  text-align: center;
+}
+.shop-item h3 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 10px 0;
+}
+.print-description {
+  color: #777;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+}
+.print-info {
+  color: #999;
+  font-size: 0.8em;
+  margin-bottom: 5px;
+}
+.print-price {
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+
+/* === Contact Section === */
+.contact-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+.contact-info {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 0 20px;
+  text-align: left;
+}
+.contact-form h2 {
+  font-size: 1.8em;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+}
+.contact-details {
+  margin-top: 60px;
+  text-align: center;
+}
+.contact-details h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.contact-details p {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  text-align: center;
+  line-height: 1.6;
+}
+.contact-details a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-details a:hover {
+  text-decoration: underline;
+}
+.contact-section a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+}
+.contact-section a:hover {
+  text-decoration: underline;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+form label {
+  margin-bottom: -5px;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #666;
+}
+form input, form textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  transition: border 0.3s ease;
+  font-size: 1em;
+}
+form button {
+  margin-top: 10px;
+  padding: 12px 25px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+form button:hover {
+  background-color: #333;
+} 
+
+/* ===== RESPONSIVE DESIGN ===== */
+/* För att göra sidan mer användarvänlig på mindre skärmar. Jag har frågat en chatbot för vägledning gällande vad jag behöver tänka på */
+@media screen and (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  section {
+    padding: 0 15px;
+  }
+  form {
+    width: 100%;
+    padding: 0 15px;
+  } 
+  .header h1 {
+    font-size: 1.8em;
+  } 
+  .hero img {
+    height: 50vh;
+  } 
+  .gallery img {
+    margin-bottom: 15px;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }  
+}

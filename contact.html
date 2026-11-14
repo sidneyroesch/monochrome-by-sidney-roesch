@@ -1,0 +1,65 @@
+<!-- Contact sida (kontaktuppgifter) -->
+<!-- Reflektion: På contact-sidan har jag skapat ett formulär med olika input-fält och försökt styla det så att det passar resten av webbplatsen. Jag har fått testa mig fram flera gånger för att förstå hur formulär fungerar och hur man stylar dem med CSS. Till exempel har jag testat mig fram med spacing, färger och fokus-effekter. Under projektet har jag gjort mycket research och fått stöd när jag fastnat, vilket har hjälpt mig att förstå både HTML och CSS bättre. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Sidney Roesch for more information about her black and white photography, gallery, or design collections. Fill out the contact form or use the provided contact details to get in touch."/>
+    <meta name="keywords" content="Monochrome, Sidney Roesch, artist, photographer, black and white photography, contact"/>     
+    <meta name="author" content="Sidney Roesch"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Monochrome by Sidney Roesch</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="theme-toggle" onclick="toggleDarkMode()">Dark Mode</button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <h1>Contact</h1>
+    </header>
+    <main>
+      <section class="contact-section">
+        <div class="contact-image">
+        <img src="images/CDD88E0E-576C-4865-88E5-324DF2887799_1_105_c.jpeg" alt="Black and white photograph of a stone building with a tiled flat roof, weathered facade and arched cobblestone doorway photographed by Sidney Roesch">
+        </div>
+      </section>
+      <section class="contact-info">
+        <div class="contact-form">
+        <h2>Contact Form</h2>
+        <form action="submit_form.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+        
+        <button type="submit">Submit</button>
+        </form>
+        </div>
+      </section>
+      <section class="contact-details">
+        <h2>Contact Details</h2>
+        <p>Email: <a href="mailto:sidney@monochrome.se">sidney@monochrome.se</a></p>
+      </section>    
+    </main>
+    <footer>
+      <p>&copy; 2026 Monochrome by Sidney Roesch. All rights reserved.</p>
+    </footer>
+    <script>
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark');
+      }
+    </script>
+  </body>
+</html>
