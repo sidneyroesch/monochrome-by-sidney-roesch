@@ -1,5 +1,6 @@
 # Monochrome by Sidney Roesch
-
+[🌐 View Live Website](https://sidneyroesch.github.io/monochrome-by-sidney-roesch/)
+![Monochrome by Sidney Roesch Homepage Preview](images/website-preview.png)
 A minimalist photography portfolio website showcasing photography through a clean, monochromatic design.
 
 ## About the Project
